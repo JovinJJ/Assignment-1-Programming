@@ -17,13 +17,13 @@ public class studentmark
      
  int numberOfStudents = 30;
  float[] marks = new float[numberOfStudents]; //here we create a marks array of length 30 which is mentioned in the question. Required for mark
- Scanner takeinput = new Scanner(System.in);
+ Scanner scanner = new Scanner(System.in);
      
      
      System.out.println("Give marks for 30 students: ");
      
      for(int i=0; i< numberOfStudents; i++) {
-         marks[i] = Scanner.nextFloat();
+         marks[i] = scanner.nextFloat();
      
  }
  
