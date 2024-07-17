@@ -58,7 +58,29 @@ public class studentmark
             }
         
         }
-        System.out.println("Highest Mark: "+maximum);     
+        System.out.println("Highest Mark: "+maximum);
+        //calculate lowest marks
+        
+        float minimum = marks[0];//we give minimum with first mark
+        for (int i=0;i<numberOfStudents;i++){
+            if(marks[i]<minimum){
+                minimum=marks[i]; // update minimum if current one is lower
+            }
+        }
+        System.out.println("Lowest mark: "+minimum);
+        
+        //sum of marks
+        
+        float total =0;
+        for (int i=0; i<numberOfStudents;i++){
+            total+=marks[i];
+        }
+        System.out.println("Sum of mark: "+total);
+        
+        //finding mean
+        
+        float mean = total/numberOfStudents;
+        System.out.println("Mean of marks: "+mean);
       
     
     
