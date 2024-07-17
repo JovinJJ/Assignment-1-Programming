@@ -78,8 +78,25 @@ public class studentmark
         
         //finding mean
         
-        float mean = total/numberOfStudents;
+        float mean = total/numberOfStudents; // calculae the mean by sum of marks
         System.out.println("Mean of marks: "+mean);
+        
+        //calculate variance to calculate standard deviation
+        float sumSQDIFF = 0;
+        for (int i=0;i<marks.length;i++){
+            float difference = marks[i]-mean;
+            sumSQDIFF += difference*difference;
+        }
+        float variance=sumSQDIFF/numberOfStudents;
+        
+        //standard deviation
+        
+        float standardDev=(float)Math.sqrt(variance);
+        
+        System.out.println("Standard Deviation: "+standardDev);
+        
+        scanner.close();
+        
       
     
     
