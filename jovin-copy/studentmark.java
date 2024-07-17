@@ -50,8 +50,15 @@ public class studentmark
             System.out.println(marks[j]);
         }
         
+        // highest mark
+        float maximum = mark[0]; // we start maximum as the first mark
+        for (int i=0; i<numberOfStudents; i++) {
+            if (marks[i]>maximum){
+                maximum=marks[i]; // we update the maximum marks after we check the current marks and it is greater
+            }
         
-             
+        }
+        System.out.println("Highest Mark: "+maximum);     
       
     
     
