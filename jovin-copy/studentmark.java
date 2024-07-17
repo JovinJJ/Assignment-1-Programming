@@ -16,56 +16,43 @@ public class studentmark
          int numberOfStudents = 30;
          float[] marks = new float[numberOfStudents]; //here we create a marks array of length 30 which is mentioned in the question. Required for mark
          Scanner scanner = new Scanner(System.in);
-     
-     
-        System.out.println("Give marks for 30 students: ");
+         
+         //enter the assignment name
+         System.out.print("Enter the assignment name: ")
+         String assignmentName = scanner.nextLine();
+         
+        // now we need to input the marks
+         
+         System.out.println("Give marks for 30 students: ");
      
         for(int i=0; i< numberOfStudents; i++){
+            while (true){
+                System.out.println("Enter mark for student "+(i+1)+":")
+                float temp=scanner.nextFloat();
+            
+            
              // check if input marks is between 0 and 30
-             float temp = scanner.nextFlaot();
              
-             if ( temp<0 || temp>30) {
+             
+             if ( temp>=0 && temp<=30) {
+                 marks[i]=temp;
+                 break;
+                 // we are ending the loop here since the valid mark is typed in
+                } else{
                  System.out.println("Invalid marks, please enter the marks again");
              }
-             
-             marks[i] = temp;
-     
-        }
- 
- 
-        System.out.println("Entered marks: ");
-        for(int j=0; j<numberOfStudents; j++) {
-             System.out.println(marks[j]);
-     
             }
-            
-        // mean = sum of all marks/number of marks
-        float total = 0;
-    
-        for (int i=0; i< numberOfStudents;i++) {
-            total = total + marks[i];
         }
         
-        float mean = total/numberOfStudents;
-        
-        float summedDiff=0
-        for (int i=0;i<numberOfStudents; i++) {
-            summedDiff = summedDiff+(marks[i]-mean)*(marks[i]-mean);
+        // print entered marks
+        System.out.println("Entered marks: ");
+        for (int j = 0;j<numberOfStudents;j++) {
+            System.out.println(marks[j]);
         }
         
-        summedDiff = summedDiff/numberOfStudents;
         
-        //float squareRootSummmedDiff = take a power (exponent) of 0.5
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+             
+      
     
     
     } 
