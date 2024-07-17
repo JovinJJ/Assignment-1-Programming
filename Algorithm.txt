@@ -1,0 +1,54 @@
+Algorithm 1:
+
+1. Get 30 inputs from the user
+
+	check if the input is greater than or equal to 0 or less than 30
+
+	if yes, error display should be visible
+
+	if no, we print the marks till we get all 30 
+
+2.Calculate the highest mark
+
+	make a variable for maximum marks and put first mark as the value for maximum marks
+
+	we check every mark from 2nd 
+
+	if the mark is greater than the current highest value , the current mark will replace 	he highest value.
+
+	make a variable for minimum marks and put the first value as minimum marks 
+
+	we check every mark from the 2nd
+	
+	if the mark is less than current lowest value, then the current mark will replace the 	lowest value
+
+	Print the highest and lowest value
+
+Algorithm 2: 
+
+3. Calculate Mean
+
+	we make a variable to store sum of marks
+
+	add mark to the sum ; we repeat this process to every mark in the array
+
+	we calculate mean by dividing the sum by 30
+
+4. Calculate standard deviation
+
+	make a variable to store sum of squared difference from mean
+
+	for every mark, we calculate the difference between mark and mean 
+
+	square the difference and add it to the sum of squared difference
+
+5. Calculate Variance
+
+	divide the sum of squared differences by 30
+
+	standard deviation is equal to the square root of variance
+
+	print the standard deviation
+
+	close the scanner
+

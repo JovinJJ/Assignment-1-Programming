@@ -16,11 +16,11 @@ public class studentmark
          int numberOfStudents = 30;
          float[] marks = new float[numberOfStudents]; //here we create a marks array of length 30 which is mentioned in the question. Required for mark
          Scanner scanner = new Scanner(System.in); 
-         //enter the assignment name
+        
          System.out.print("Enter the assignment name: ");
          String assignmentName = scanner.nextLine();
          
-        // now we need to input the marks
+      
          
          System.out.println("Give marks for 30 students: ");
      
@@ -30,7 +30,7 @@ public class studentmark
                 float temp=scanner.nextFloat();
             
             
-             // check if input marks is between 0 and 30
+             
              
              
              if ( temp>=0 && temp<=30) {
@@ -43,7 +43,7 @@ public class studentmark
             }
         }
         
-        // print entered marks
+       
         System.out.println("Entered marks: ");
         for (int j = 0;j<numberOfStudents;j++) {
             System.out.println(marks[j]);
@@ -60,7 +60,7 @@ public class studentmark
         System.out.println("Highest Mark: "+maximum);
             // here calculate lowest marks
         
-        float minimum = marks[0];//we give minimum with first mark
+        float minimum = marks[0];
             for (int i=0;i<numberOfStudents;i++){
             if(marks[i]<minimum){
                 minimum=marks[i]; // update minimum if current one is lower
@@ -78,7 +78,7 @@ public class studentmark
         
         //finding mean
         
-        float mean = total/numberOfStudents; // calculae the mean by sum of marks
+        float mean = total/numberOfStudents; 
         System.out.println("Mean of marks: "+mean);
         
         //calculate variance to calculate standard deviation
@@ -89,7 +89,7 @@ public class studentmark
         }
         float variance=sumSQDIFF/numberOfStudents;
         
-        //standard deviation
+        
         
         float standardDev=(float)Math.sqrt(variance);
         
