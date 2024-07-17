@@ -1,8 +1,8 @@
 
 /**
- * Write a description of class studentmark here.
+ * Assignment 1 Fundamentals of Programing.
  *
- * @author (your name)
+ * @author Jovin Joseph
  * @version (a version number or a date)
  */
 
@@ -15,10 +15,9 @@ public class studentmark
      public static void main (String[] args) {//shows the code where to start
          int numberOfStudents = 30;
          float[] marks = new float[numberOfStudents]; //here we create a marks array of length 30 which is mentioned in the question. Required for mark
-         Scanner scanner = new Scanner(System.in);
-         
+         Scanner scanner = new Scanner(System.in); 
          //enter the assignment name
-         System.out.print("Enter the assignment name: ")
+         System.out.print("Enter the assignment name: ");
          String assignmentName = scanner.nextLine();
          
         // now we need to input the marks
@@ -27,7 +26,7 @@ public class studentmark
      
         for(int i=0; i< numberOfStudents; i++){
             while (true){
-                System.out.println("Enter mark for student "+(i+1)+":")
+                System.out.println("Enter mark for student "+(i+1)+":");
                 float temp=scanner.nextFloat();
             
             
@@ -51,7 +50,7 @@ public class studentmark
         }
         
         // highest mark
-        float maximum = mark[0]; // we start maximum as the first mark
+        float maximum = marks[0]; // we start maximum as the first mark
         for (int i=0; i<numberOfStudents; i++) {
             if (marks[i]>maximum){
                 maximum=marks[i]; // we update the maximum marks after we check the current marks and it is greater
@@ -59,19 +58,19 @@ public class studentmark
         
         }
         System.out.println("Highest Mark: "+maximum);
-        //calculate lowest marks
+            // here calculate lowest marks
         
         float minimum = marks[0];//we give minimum with first mark
-        for (int i=0;i<numberOfStudents;i++){
+            for (int i=0;i<numberOfStudents;i++){
             if(marks[i]<minimum){
                 minimum=marks[i]; // update minimum if current one is lower
             }
-        }
+            }
         System.out.println("Lowest mark: "+minimum);
         
         //sum of marks
         
-        float total =0;
+            float total =0;
         for (int i=0; i<numberOfStudents;i++){
             total+=marks[i];
         }
